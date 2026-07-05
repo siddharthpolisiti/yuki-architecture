@@ -6,6 +6,14 @@ The product code is private, but this repo documents the **high-level architectu
 
 > Built and maintained by [Sid Polisiti](https://github.com/siddharthpolisiti). Scaled to 3,000+ active users in the first two months, built solo.
 
+**Why this exists:** when I started building Yuki I couldn't find a clear, honest reference for how a solo founder actually wires together a modern AI product without a team or a big budget. This repo is my attempt to share that tech landscape openly — the tools, tradeoffs, and structure — so other solo founders can move faster. It documents patterns, not proprietary code.
+
+![Yuki high-level architecture](./diagram.svg)
+
+**More context:**
+- Product documentation: [docs.yukihq.com](https://docs.yukihq.com)
+- The stack, tooling, and cost tradeoffs I chose as a solo founder: [portfolio README](https://github.com/siddharthpolisiti/sid-portfolio)
+
 ---
 
 ## System at a glance
@@ -77,6 +85,7 @@ flowchart TD
 - Authentication is handled by **Supabase Auth** with Google OAuth for frictionless onboarding.
 - A separate `profiles` table stores durable, app-level user data (consent timestamps, preferences) decoupled from the auth identity.
 - Restricted Gmail/Calendar scopes are requested only for the features that need them.
+- Because Yuki requests restricted Gmail scopes, it passed an **independent CASA Tier 2 security assessment** — covering OAuth handling, encryption, access controls, and incident response. Details: [docs.yukihq.com/security/casa](https://docs.yukihq.com/security/casa).
 
 ## Edge Functions — low-latency server logic
 
@@ -127,5 +136,7 @@ Concurrency is guarded with explicit locks and mutexes so a background sync and 
 ## Why this architecture
 
 As a solo founder, I optimized for **developer velocity, low fixed cost, and data ownership**. Supabase let me move from whiteboard to thousands of users without building and maintaining backend plumbing myself — while still keeping real Postgres, full control of my schema, and a clear path to a more complex architecture as the product grows.
+
+If you're a solo founder figuring out your own stack, I hope this is a useful map. For the deeper tooling and cost breakdown (hosting, analytics, payments, observability, startup credits), see the [portfolio README](https://github.com/siddharthpolisiti/sid-portfolio), and for the product itself see [docs.yukihq.com](https://docs.yukihq.com).
 
 *This document is intentionally high-level. Implementation details and product code are private.*

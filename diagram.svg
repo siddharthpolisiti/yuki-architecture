@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <rect width="960" height="560" fill="#0f1117"/>
+  <text x="480" y="44" fill="#ffffff" font-size="24" font-weight="700" text-anchor="middle">Yuki — High-Level Architecture</text>
+  <text x="480" y="70" fill="#8b93a7" font-size="13" text-anchor="middle">AI personal assistant · built on Supabase · a tech landscape reference for solo founders</text>
+
+  <!-- Client layer -->
+  <g>
+    <rect x="60" y="100" width="840" height="80" rx="12" fill="#161a24" stroke="#2b3242"/>
+    <text x="80" y="128" fill="#7dd3fc" font-size="13" font-weight="700">CLIENT</text>
+    <rect x="80" y="138" width="220" height="30" rx="6" fill="#1e2430" stroke="#2b3242"/>
+    <text x="190" y="158" fill="#e7ebf3" font-size="12" text-anchor="middle">React Native + Expo (TypeScript)</text>
+    <rect x="320" y="138" width="220" height="30" rx="6" fill="#1e2430" stroke="#2b3242"/>
+    <text x="430" y="158" fill="#e7ebf3" font-size="12" text-anchor="middle">Optimistic UI · local cache</text>
+    <rect x="560" y="138" width="320" height="30" rx="6" fill="#1e2430" stroke="#2b3242"/>
+    <text x="720" y="158" fill="#e7ebf3" font-size="12" text-anchor="middle">OTA updates · push-first UX</text>
+  </g>
+
+  <!-- Supabase layer -->
+  <g>
+    <rect x="60" y="210" width="540" height="130" rx="12" fill="#12211a" stroke="#2f5d45"/>
+    <text x="80" y="238" fill="#3ecf8e" font-size="13" font-weight="700">SUPABASE</text>
+    <rect x="80" y="250" width="150" height="34" rx="6" fill="#16281f" stroke="#2f5d45"/>
+    <text x="155" y="272" fill="#d7f5e6" font-size="12" text-anchor="middle">Postgres + RLS</text>
+    <rect x="240" y="250" width="150" height="34" rx="6" fill="#16281f" stroke="#2f5d45"/>
+    <text x="315" y="272" fill="#d7f5e6" font-size="12" text-anchor="middle">Auth · Google SSO</text>
+    <rect x="400" y="250" width="180" height="34" rx="6" fill="#16281f" stroke="#2f5d45"/>
+    <text x="490" y="272" fill="#d7f5e6" font-size="12" text-anchor="middle">Edge Functions</text>
+    <rect x="80" y="294" width="150" height="34" rx="6" fill="#16281f" stroke="#2f5d45"/>
+    <text x="155" y="316" fill="#d7f5e6" font-size="12" text-anchor="middle">Storage / S3</text>
+    <rect x="240" y="294" width="340" height="34" rx="6" fill="#16281f" stroke="#2f5d45"/>
+    <text x="410" y="316" fill="#d7f5e6" font-size="12" text-anchor="middle">Migrations · idempotent · staging-tested</text>
+  </g>
+
+  <!-- Sync & agent layer -->
+  <g>
+    <rect x="620" y="210" width="280" height="130" rx="12" fill="#1b1726" stroke="#4a3d63"/>
+    <text x="640" y="238" fill="#c4b5fd" font-size="13" font-weight="700">SYNC &amp; AGENTS</text>
+    <rect x="640" y="250" width="240" height="34" rx="6" fill="#241d33" stroke="#4a3d63"/>
+    <text x="760" y="272" fill="#e7defb" font-size="12" text-anchor="middle">Background sync service</text>
+    <rect x="640" y="294" width="240" height="34" rx="6" fill="#241d33" stroke="#4a3d63"/>
+    <text x="760" y="316" fill="#e7defb" font-size="12" text-anchor="middle">Cost-aware AI routing layer</text>
+  </g>
+
+  <!-- Pipeline -->
+  <g>
+    <rect x="60" y="370" width="840" height="70" rx="12" fill="#161a24" stroke="#2b3242"/>
+    <text x="80" y="398" fill="#fbbf24" font-size="13" font-weight="700">AGENTIC PIPELINE</text>
+    <text x="80" y="424" fill="#e7ebf3" font-size="13">Ingest  →  Sanitize (PII stripped)  →  Route to agent  →  Structure into Postgres  →  Notify only what matters</text>
+  </g>
+
+  <!-- External -->
+  <g>
+    <rect x="60" y="470" width="840" height="60" rx="12" fill="#12151d" stroke="#2b3242"/>
+    <text x="80" y="496" fill="#8b93a7" font-size="13" font-weight="700">EXTERNAL</text>
+    <text x="80" y="518" fill="#c3c9d6" font-size="12">Gmail / Calendar (restricted scopes) · LLM providers · Subscriptions &amp; webhooks · Observability &amp; product analytics</text>
+  </g>
+
+  <!-- connectors -->
+  <g stroke="#3a4151" stroke-width="2" fill="none">
+    <path d="M330 180 L330 210"/>
+    <path d="M700 180 L700 210"/>
+    <path d="M600 275 L620 275"/>
+    <path d="M480 340 L480 370"/>
+    <path d="M480 440 L480 470"/>
+  </g>
+</svg>
