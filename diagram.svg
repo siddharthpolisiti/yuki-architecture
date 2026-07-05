@@ -52,7 +52,7 @@
   <g>
     <rect x="60" y="470" width="840" height="60" rx="12" fill="#12151d" stroke="#2b3242"/>
     <text x="80" y="496" fill="#8b93a7" font-size="13" font-weight="700">EXTERNAL</text>
-    <text x="80" y="518" fill="#c3c9d6" font-size="12">Gmail / Calendar (restricted scopes) · LLM providers · Subscriptions &amp; webhooks · Observability &amp; product analytics</text>
+    <text x="80" y="518" fill="#c3c9d6" font-size="12">Gmail / Calendar (restricted scopes) · LLM providers · RevenueCat (subscriptions) · Sentry + PostHog</text>
   </g>
 
   <!-- connectors -->
