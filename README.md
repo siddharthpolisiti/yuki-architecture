@@ -4,7 +4,7 @@ Yuki is an AI personal assistant that automatically organizes email, calendars, 
 
 The product code is private, but this repo documents the **high-level architecture** so you can see how a real, production AI product is put together: Postgres as the source of truth, Edge Functions for low-latency AI routing, Google SSO auth, agentic background workflows, and the supporting tools that keep it reliable and cheap to run.
 
-> Built and maintained by [Sid Polisiti](https://github.com/siddharthpolisiti). Scaled to 3,000+ active users in the first two months, built solo.
+> Built and maintained by [Sid Polisiti](https://github.com/siddharthpolisiti). Scaled to 3,000 active users in the first two months, now past 10,000 downloads — built solo.
 
 **Why this exists:** when I started building Yuki I couldn't find a clear, honest reference for how a solo founder actually wires together a modern AI product without a team or a big budget. This repo is my attempt to share that tech landscape openly, the tools, the tradeoffs, and the structure, so other solo founders can move faster. It documents patterns, not proprietary code.
 
